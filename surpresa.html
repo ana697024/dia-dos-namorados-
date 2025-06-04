@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surpresa!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <img src="img/casal2.jpg" alt="Gatinho fofo" class="imagem">
+    <h1>Surpresa!</h1>
+    <h4>O casal mais fd de todos. </h4>
+    <button id="foge">Clique</button>
+  </div>
+
+  <script>
+    const botao = document.getElementById('foge');
+
+    botao.addEventListener('click', () => {
+      window.location.href = 'final.html';
+    });
+  </script>
+</body>
+</html>

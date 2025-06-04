@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perguntinhas </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Responde com sinceridade </h1>
+
+    <div id="pergunta-container">
+      <p id="pergunta-texto"></p>
+      <button onclick="responder('sim')">Sim</button>
+      <button onclick="responder('nao')">Não</button>
+    </div>
+
+    <div id="resposta"></div>
+
+    <button id="botao-surpresa" onclick="irParaSurpresa()" style="display: none; margin-top: 20px;">
+      Ir para a surpresa 
+    </button>
+  </div>
+
+  <script>
+    const perguntas = [
+      "Você me ama?",
+      "Vc me que p smpr?",
+      "Tem noção do quanto eu te amo?"
+    ];
+
+    let indice = 0;
+
+    const perguntaTexto = document.getElementById('pergunta-texto');
+    const respostaDiv = document.getElementById('resposta');
+    const botaoSurpresa = document.getElementById('botao-surpresa');
+
+    function mostrarPergunta() {
+      if (indice < perguntas.length) {
+        perguntaTexto.textContent = perguntas[indice];
+      } else {
+        document.getElementById('pergunta-container').style.display = 'none';
+        botaoSurpresa.style.display = 'block';
+      }
+    }
+
+    function responder(resposta) {
+      if (resposta === 'sim') {
+        respostaDiv.textContent = "eu te amooo";
+      } else {
+        respostaDiv.textContent = "Aff.. smt";
+      }
+
+      indice++;
+      setTimeout(() => {
+        respostaDiv.textContent = '';
+        mostrarPergunta();
+      }, 1000); // Espera 1 seg pra mostrar próxima
+    }
+
+    function irParaSurpresa() {
+      window.location.href = 'surpresa.html';
+    }
+
+    mostrarPergunta();
+  </script>
+</body>
+</html>

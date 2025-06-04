@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chuva de Amor 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9fd7, #ffd2f5);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      position: relative;
+    }
+
+    h1 {
+      position: absolute;
+      top: 40px;
+      color: #f7f7f7;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .eu-te-amo {
+      position: absolute;
+      top: 0;
+      color: #ffffff;
+      font-size: 20px;
+      animation: cair linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes cair {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    .caixinha {
+      position: relative;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(253, 253, 253, 0.2);
+      text-align: center;
+      z-index: 1;
+      max-width: 300px;
+    }
+
+    .caixinha textarea {
+      width: 100%;
+      height: 100px;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      resize: none;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .caixinha button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: hsl(346, 87%, 78%);
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .caixinha button:hover {
+      background: #ff3e6c;
+    }
+  </style>
+</head>
+<body>
+  <h1>cada eu te amo é o meu amor por vc bê </h1>
+
+  <div class="caixinha">
+    <h2>sinceras palavras..</h2>
+    <textarea placeholder="Mais um dia dos namorados ao seu lado, ainda mais um ano juntos infelizmente de
+    mtas brigas bobas, mas conseguimos passar por cima disso, em partes acho q foi bom esses 6 meses separado pra pensar nos
+    nossos erros e melhr com eles, entendo mtas das nossas brigas pq nosso relacionamento é complicado mais fico mt feliz por vc esta 
+    sempre ao meu lado tentando entender. Vc mudou bastante me deixando bem orgulhosa fico mt feliz por vc ter conquistado as suas coisas
+    e mt feliz, por estar nesses momentos de conquista, mas tambem de estar com vc qnd vc precisava vc é uma otima pessoa tem um coração mmt grando
+    como td mundo tem seus defeitinhos mas com o tempo, tais melhorando. EU amo vc, gosto de vc a mt tempo antes mesmo de vc gosta de mim kkk 
+    amo td em vc desdos seu cabelo cacheadinho loirinho, seus olhos azuis sua boca desenhada kk suas bochechas fofinhas, sua orelhona seu pescoço super 
+    cheiroso, seu buchinho fofinho, sua mão ABENÇOADA ( q me faz goza horrores kk) suas coxonas branquela seu pé q parece um pãozinho, seu sorriso
+    lindo, amo TD em vc até seu jeitinho infantil ou qnd vc fica mt put e começa a piscar mais rapido kkk aff... amo dms vc
+    vc é meu amorzinho adolecente. EU TE AMO, feliz dia dos namorados ficante premium.
+    
+    
+    10.12 sempre sera nossa data, e vc smp sera o amor da minha vida"></textarea>
+    <button onclick="maisAmor()">MAIS AMOR!</button>
+  </div>
+
+  <script>
+    function criarEuTeAmo() {
+      const texto = document.createElement('div');
+      texto.classList.add('eu-te-amo');
+      texto.textContent = 'Eu te amo ';
+
+      texto.style.left = Math.random() * window.innerWidth + 'px';
+      texto.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      texto.style.fontSize = (Math.random() * 10 + 20) + 'px';
+
+      document.body.appendChild(texto);
+
+      setTimeout(() => {
+        texto.remove();
+      }, 5000);
+    }
+
+    setInterval(criarEuTeAmo, 300);
+
+    function maisAmor() {
+      for (let i = 0; i < 20; i++) {
+        criarEuTeAmo();
+      }
+    }
+  </script>
+</body>
+</html>
